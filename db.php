@@ -1,21 +1,24 @@
 <?php
-require_once '../config/config.php';
+require_once 'config.php';
 
-class Database {
+class Database
+{
     private $conn;
-    
-    public function connect() {
+
+    public function connect()
+    {
         try {
             $this->conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
             return $this->conn;
-        } catch(Exception $e) {
+        } catch (Exception $e) {
             echo "Connection failed: " . $e->getMessage();
             return null;
         }
     }
-    
-    public function close() {
-        if($this->conn) {
+
+    public function close()
+    {
+        if ($this->conn) {
             $this->conn->close();
         }
     }

@@ -4,7 +4,7 @@ USE JojoHotelsDB;
 
 -- Create Users table
 CREATE TABLE Users (
-    UserID INT PRIMARY KEY AUTO_INCREMENT,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     Username VARCHAR(50) NOT NULL UNIQUE,
     PasswordHash VARCHAR(255) NOT NULL,
     Email VARCHAR(100) NOT NULL UNIQUE,
@@ -37,7 +37,7 @@ CREATE TABLE Rooms (
 -- Create Bookings table
 CREATE TABLE Bookings (
     BookingID INT PRIMARY KEY AUTO_INCREMENT,
-    UserID INT,
+    id INT,
     RoomID INT,
     CheckInDate DATE NOT NULL,
     CheckOutDate DATE NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE Bookings (
     NumGuests INT NOT NULL,
     BookingStatus VARCHAR(20) DEFAULT 'Pending',
     CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    FOREIGN KEY (id) REFERENCES Users(id),
     FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID)
 );
 
