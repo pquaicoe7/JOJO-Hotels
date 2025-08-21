@@ -87,9 +87,11 @@ $total = $booking['TotalPrice'] + $pickupCost;
   </style>
 </head>
 <body>
-
+<?php include 'includes/header.php'; ?>
   <div class="card">
-    <h2>💰 Final Payment Summary</h2>
+     
+
+  <h2>💰 Final Payment Summary</h2>
     <div class="summary">
       <p><strong>Room Cost:</strong> GHS <?= number_format($booking['TotalPrice'], 2) ?></p>
       <p><strong>Pickup Cost:</strong> GHS <?= number_format($pickupCost, 2) ?></p>

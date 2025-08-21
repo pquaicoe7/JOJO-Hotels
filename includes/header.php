@@ -1,26 +1,46 @@
-<nav>
-    <div class="nav__bar">
-        <div class="nav__header">
-            <div class="logo nav__logo">
-                <div>J</div>
-                <span>JOJO<br />HOTELS</span>
-            </div>
-        </div>
-        <div class="navlinks">
-            <a href="#home">Home</a>
-            <a href="#room">Rooms</a>
-            <a href="#feature">Features</a>
-            <a href="menu.php">Menu</a>
-            <a href="#news">News</a>
-            <a href="login.php">Login</a>
-        </div>
-    </div>
-</nav>
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-<header class="header" id="header">
-    <div class="section__container header__container">
-        <p class="section__subheader">ABOUT US</p>
-        <h1>Your Comfort<br />Our Support</h1>
-        <button class="btn">Take a Tour</button>
-    </div>
-</header>
+// Default: show Login link
+$userDisplay = "<a href='login.php' style='color:white; text-decoration:none;'>Login</a>";
+
+// Logged-in: show greeting + logout button
+if (!empty($_SESSION['username'])) {
+    $firstName = htmlspecialchars($_SESSION['username']);
+    $userDisplay = "
+      <div style='display: flex; align-items: center; gap: 15px; font-size: 16px;'>
+        <span style='color: #febb02;'>Hi, $firstName 👋</span>
+        <form action='logout.php' method='POST' style='margin:0;'>
+          <button type='submit' style='
+            background-color: #febb02;
+            color: #003580;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          ' onmouseover=\"this.style.backgroundColor='#e0a800'\"
+             onmouseout=\"this.style.backgroundColor='#febb02'\">
+            Logout
+          </button>
+        </form>
+      </div>
+    ";
+}
+?>
+
+<!-- ✅ Reusable Header -->
+<div class="header" style="
+  background: #003580;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+">
+  <h1 style="margin: 0;">JOJO Hotels</h1>
+  <?= $userDisplay ?>
+</div>

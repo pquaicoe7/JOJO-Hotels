@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -173,21 +170,21 @@ session_start();
 </head>
 
 <body>
+  <?php include 'includes/header.php'; ?>
 
-  <div class="header">
-    <h1>JOJO Hotels</h1>
-    <a href="login.php" style="color:white;">Login</a>
-  </div>
 
   <div class="hero" style="
   background: url('Pictures/hero.jpg') center/cover no-repeat;
 ">
-  <h2>A Place to Call Home</h2>
-  <p>Choose from comfortable rooms and great services at JOJO Hotels</p>
-</div>
+    <h2>A Place to Call Home</h2>
+    <p>Choose from comfortable rooms and great services at JOJO Hotels</p>
+  </div>
 
-<div style="margin-top: 20px; text-align: center;">
-  <button id="openModal" style="
+ 
+  <?php include 'includes/slideshow.php'; ?>
+
+  <div style="margin-top: 20px; text-align: center;">
+    <button id="openModal" style="
     background-color: #febb02;
     color: #003580;
     border: none;
@@ -199,12 +196,14 @@ session_start();
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
   ">
-    Book Now
-  </button>
-</div>
+      Book Now
+    </button>
+
+  </div>
+  
 
 
-  <!-- ✅ About Section -->
+  <!--  About Section -->
   <div class="section">
     <h3>About Us</h3>
     <p>
@@ -212,10 +211,10 @@ session_start();
       Whether you're a solo traveler, a couple on vacation, or a business professional,
       we have the perfect space for you.
     </p>
-    <a href="#" class="btn" id="openModal">Book Now</a>
+  
   </div>
 
-  <!-- ✅ Features Section -->
+  <!-- Features Section -->
   <div class="section">
     <h3>Why Choose Us</h3>
     <div class="features-container">
@@ -236,23 +235,19 @@ session_start();
 
   <?php include 'includes/booking_modal.php'; ?>
 
-  <!-- ✅ Footer -->
+  <!-- Footer -->
   <footer>
-    <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+    <div
+      style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
 
       <div>
         <h3 style="margin: 0 0 10px;">JOJO Hotels</h3>
-        <p style="max-width: 300px; line-height: 1.6;">Affordable comfort and great hospitality in the heart of Ghana.</p>
+        <p style="max-width: 300px; line-height: 1.6;">Affordable comfort and great hospitality in the heart of Ghana.
+        </p>
       </div>
 
       <div>
-        <h4 style="margin: 0 0 10px;">Links</h4>
-        <ul>
-          <li><a href="home.php">Home</a></li>
-          <li><a href="available_rooms.php">Rooms</a></li>
-          <li><a href="menu.php">Menu</a></li>
-          <li><a href="contact.php">Contact</a></li>
-        </ul>
+         
       </div>
 
       <div>
@@ -273,6 +268,7 @@ session_start();
     flatpickr("#arrival", { minDate: "today" });
     flatpickr("#departure", { minDate: "today" });
   </script>
+<?php include 'includes/chatbot.php'; ?>
 
 </body>
 

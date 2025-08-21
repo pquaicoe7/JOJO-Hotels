@@ -1,5 +1,7 @@
 {
     "require": {
-        "phpmailer/phpmailer": "*"
+        "phpmailer/phpmailer": "*",
+        "guzzlehttp/guzzle": "^7.9",
+        "africastalking/africastalking": "^3.0"
     }
 }

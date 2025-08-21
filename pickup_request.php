@@ -1,3 +1,7 @@
+<?php include 'includes/header.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -173,7 +177,8 @@
 </head>
 
 <body>
-    <div class="header">
+     
+<div class="header">
         <h1>Hotel Pickup Request</h1>
     </div>
 

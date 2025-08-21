@@ -52,6 +52,7 @@ $userName = $_SESSION['name'] ?? 'John Doe';
   </style>
 </head>
 <body>
+<?php include 'includes/header.php'; ?>
 
 <div class="container">
   <h2>Finalize Your Booking Payment</h2>
@@ -63,11 +64,11 @@ $userName = $_SESSION['name'] ?? 'John Doe';
 <script>
   function payWithPaystack() {
     let handler = PaystackPop.setup({
-      key: 'pk_test_018ea9b14a696336ef0a9606d1e5045a203a41c4', // Replace with your public key
+      key: 'pk_test_018ea9b14a696336ef0a9606d1e5045a203a41c4',
       email: '<?= $userEmail ?>',
-      amount: <?= $total ?> * 100, // Amount in kobo
+      amount: <?= $total ?> * 100,
       currency: "GHS",
-      ref: 'HOTELBOOK_' + Math.floor((Math.random() * 1000000000) + 1), // Random reference
+      ref: 'HOTELBOOK_' + Math.floor((Math.random() * 1000000000) + 1),
       metadata: {
         custom_fields: [
           {
@@ -78,11 +79,11 @@ $userName = $_SESSION['name'] ?? 'John Doe';
         ]
       },
       callback: function(response) {
-        alert('Payment successful! Ref: ' + response.reference);
-        window.location.href = "payment_success.php?ref=" + response.reference + "&booking_id=<?= $bookingId ?>";
+        alert('✅ Payment successful! Ref: ' + response.reference);
+        window.location.href = "booking_receipt.php?booking_id=<?= $bookingId ?>";
       },
       onClose: function() {
-        alert('Transaction was cancelled.');
+        alert('❌ Transaction was cancelled.');
       }
     });
 

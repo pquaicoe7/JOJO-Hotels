@@ -4,6 +4,7 @@ $bookingId = $_GET['booking_id'] ?? '';
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Pickup Confirmed</title>
@@ -74,7 +75,9 @@ $bookingId = $_GET['booking_id'] ?? '';
     }
   </style>
 </head>
+
 <body>
+  <?php include 'includes/header.php'; ?>
 
   <div class="header">
     <h1>Pickup Confirmation</h1>
@@ -85,7 +88,8 @@ $bookingId = $_GET['booking_id'] ?? '';
       <h2>✅ Your Pickup Request Has Been Confirmed!</h2>
       <p class="success-message">Thank you for choosing us. A driver will contact you shortly to arrange your pickup.</p>
       <div class="note">
-        <strong>Note:</strong> This pickup fee will be added to your total room cost. Please proceed to finalize your payment.
+        <strong>Note:</strong> This pickup fee will be added to your total room cost. Please proceed to finalize your
+        payment.
       </div>
       <a href="final_summary.php?booking_id=<?= urlencode($bookingId) ?>" class="btn">Finish Booking</a>
     <?php else: ?>
@@ -96,4 +100,5 @@ $bookingId = $_GET['booking_id'] ?? '';
   </div>
 
 </body>
+
 </html>
