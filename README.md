@@ -62,6 +62,39 @@ Setup (Local)
 
 ------------------------------------------------------------
 
+Screenshots
+-----------
+
+Homepage
+![Homepage](screenshots/home.png)
+
+Room Listings
+![Rooms](screenshots/rooms.png)
+
+Availability Check
+![Availability Check](screenshots/avibility-check.png)
+
+Booking and Payment
+![Payment](screenshots/payment.png)
+
+Pickup Request
+![Pickup Request 1](screenshots/pickup-request1.png)
+![Pickup Request 2](screenshots/pickup-request2.png)
+
+Virtual Room Tour
+![Virtual Room Tour](screenshots/virtual-tour.png)
+
+Admin Login
+![Admin Login](screenshots/admin-login.png)
+
+Admin Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+Driver Notifications
+![Driver](screenshots/driver.png)
+![Driver Message](screenshots/driver-message.jpg)
+
+
  
 
 Author
