@@ -2,7 +2,7 @@ JOJO Hotels – Booking System
 ============================
 
 A complete hotel booking and management system built with PHP and MySQL.  
-The project includes AI-powered room recommendations, chatbot support, hotel pickup with Google Maps API, Paystack payment integration, and an admin dashboard with analytics.
+The project includes AI-powered room recommendations, chatbot support, virtual room tours, hotel pickup with Google Maps API, Paystack payment integration, and an admin dashboard with analytics.
 
 ------------------------------------------------------------
 
@@ -13,6 +13,7 @@ Customer
 - Room search and availability by date and number of guests
 - AI-powered room ranking that learns from clicks and bookings
 - Chatbot support for FAQs, booking guidance, and policies
+- Virtual room tours for immersive 360° viewing of hotel rooms
 - Booking flow with receipts and summaries
 - Pickup requests with distance and cost calculated in real time
 - Paystack checkout for secure payments
@@ -34,7 +35,8 @@ APIs and Services:
 - Paystack (Payments)  
 - Google Maps API (Distance and pickup cost calculation)  
 - Africastalking (SMS notifications)  
-AI: Multi-armed bandit algorithm for recommendations
+AI: Multi-armed bandit algorithm for recommendations  
+Virtual Tours: Embedded 360° viewing using JavaScript libraries or external viewer integration
 
 ------------------------------------------------------------
 
